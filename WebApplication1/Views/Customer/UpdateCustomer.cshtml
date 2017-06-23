@@ -1,0 +1,64 @@
+﻿@model WebApplication1.Models.Customer
+@{
+    ViewBag.Title = "UpdateCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UpdateCustomer</h2>
+<form id="Form">
+    <table class="table table-striped">
+        
+        <tr>
+            <td>編號</td>
+            <td>@ViewBag.Customer.CustomerID<input type="hidden" name="CoustomerID" id="CoustomerID"  /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>名稱</td>
+            <td><input type="text" name="CompanyName" id="CompanyName" class="k-textbox" value="@ViewBag.Customer.CompanyName" required data-required-msg="請輸入名稱" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>聯絡人姓名</td>
+            <td><input type="text" name="ContactName" id="ContactName" class="k-textbox" value="@ViewBag.Customer.ContactName" required data-required-msg="請輸入聯絡人姓名" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>聯絡人職稱</td>
+            <td><input name="ContactTitle" id="ContactTitle" value="@ViewBag.Customer.ContactTitle" required data-required-msg="請選擇聯絡人職稱" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>建立日期</td>
+            <td><input name="CreationDate" id="CreationDate" value="@ViewBag.Customer.CreationDate" required data-required-msg="請輸入日期" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>國家</td>
+            <td><input type="text" name="Country" id="Country" class="k-textbox" value="@ViewBag.Customer.Country" required data-required-msg="請輸入國家" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>城市</td>
+            <td><input type="text" name="City" id="City" class="k-textbox" value="@ViewBag.Customer.City" required data-required-msg="請輸入城市" /></td>
+        </tr>
+        <tr>
+            <td>區域</td>
+            <td><input type="text" name="Region" id="Region" class="k-textbox" value="@ViewBag.Customer.Region" /></td>
+        </tr>
+        <tr>
+            <td>郵遞區號</td>
+            <td><input type="text" name="PostalCode" id="PostalCode" class="k-textbox" value="@ViewBag.Customer.PostalCode" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>地址</td>
+            <td><input type="text" name="Address" id="Address" class="k-textbox" required data-required-msg="請輸入地址" value="@ViewBag.Customer.Address" /></td>
+        </tr>
+        <tr>
+            <td><span class="require">*</span>電話</td>
+            <td><input type="text" name="Phone" id="Phone" class="k-textbox" required data-required-msg="請輸入電話" value="@ViewBag.Customer.Phone" /></td>
+        </tr>
+        <tr>
+            <td>傳真</td>
+            <td><input type="text" name="Fax" id="Fax" class="k-textbox" value="@ViewBag.Customer.Fax" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" id="InsertBtn">修改</button><input type="reset" name="清除" id="ResetBtn" /></td>
+        </tr>
+    </table>
+</form>

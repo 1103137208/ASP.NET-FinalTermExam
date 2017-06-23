@@ -1,0 +1,33 @@
+﻿@model WebApplication1.Models.CustomerSearch
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/IndexKendo.js"></script>
+<h2>Index</h2>
+<form id="Form">
+    <table class="table table-striped">
+        <tr>
+            <td>客戶編號</td>
+            <td><input type="text" name="CustomerID" id="CustomerID" class="k-textbox"/></td>
+        </tr>
+        <tr>
+            <td>客戶名稱</td>
+            <td><input type="text" name="CompanyName" id="CompanyName" class="k-textbox"/></td>
+        </tr>
+        <tr>
+            <td>聯絡人姓名</td>
+            <td><input type="text" name="ContactName" id="ContactName" class="k-textbox"/></td>
+        </tr>
+        <tr>
+            <td>聯絡人職稱</td>
+            <td><input type="text" name="ContactTitle" id="ContactTitle" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" id="SearchBtn">查詢</button><input type="reset" name="清除" id="ResetBtn" /><button type="button" id="InsertBtn">新增</button></td>
+        </tr>
+    </table>
+</form>
+<div id="Grid"></div>
+
